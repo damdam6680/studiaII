@@ -1,7 +1,7 @@
 import string
- 
-alfabet="ABCDEFGHIJKLNOUPQRSTUVWXYZ"
- 
+
+alfabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 def encryptCezar(M, shift):
     alf = alfabet[shift:] + alfabet[:shift]
     dic = {}
@@ -19,7 +19,7 @@ def BFattackCezar(C):
         print(f"z przesunieciem {i} otrzymano {encryptCezar(C, i)}")
 tj = 'CEZARCIPHER'
 ct = encryptCezar(tj, 3)
- 
+
 print("tekst janwy", tj)
 print("zt", ct)
 print("ods", encryptCezar(ct, -3 % 26))
